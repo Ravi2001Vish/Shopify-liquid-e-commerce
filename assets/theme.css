@@ -36,6 +36,19 @@ body {
     text-decoration: none;
     color: inherit;
  }
+ .announce{
+   background-color: rgb(182, 227, 241);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 30px;
+   
+    }
+    .announce h3{
+      color: #666164;
+      font-family: cursive;
+    }
+   
 
 
  .notfound {

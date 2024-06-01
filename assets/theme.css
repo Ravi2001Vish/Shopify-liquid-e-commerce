@@ -329,3 +329,41 @@ padding: 8px;
    transition: 0.6s;
    transform: scale(1.1);
 }
+
+.div1{
+   color: #dee2e6;
+   margin-top: -6rem;
+ }
+.divthree h4{
+   text-align: center;
+   color: white;
+}
+.divtwo h4{
+   text-align: center;
+   color: white;
+}
+.last{
+
+   margin-top: -6rem;
+}
+.footerbtn{
+   background-color: red;
+   color: #fff;
+   width: 109px;
+   height: 35px;
+   outline: none;
+   border: none;
+   font-family: cursive;
+   letter-spacing: 2px;
+}
+.last input{
+   height: 35px;
+   outline: none;
+   width: 19rem;
+}
+.last h3{
+   color: white;
+}
+.last p{
+   color: white;
+}

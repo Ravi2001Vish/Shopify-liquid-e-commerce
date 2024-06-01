@@ -1,112 +1,97 @@
 <section>
-  <div class="three-images-wrapper">
-    {%- if section.settings.image != blank -%}
-      <div class="one-user">
-        <h1></h1>
+<div class="review">
+  <div class="review__items">
+     
+      <div class="innerimg1">
+    
+        
+ <div class="content">
+  <h1 class="textpara">Welcome to Sailor</h1>
+        
+  <p class="textpara">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nostrum blanditiis sapiente perferendis enim cupiditate odio natus tempore facere ratione qui illum reiciendis asperiores,<br> consequatur facilis incidunt aspernatur corrupti. Praesentium.
+  </p>
+  <button  class="jshoverbtn">click</button>
+
+ </div>
       </div>
-    {%- else -%}
-      <div class="one">
-        <h1></h1>
-      </div>
-    {%- endif -%}
-    {%- if section.settings.image2 != blank -%}
-      <div class="two-user">
-        <h1></h1>
-      </div>
-    {%- else -%}
-      <div class="two">
-        <h1></h1>
-      </div>
-    {%- endif -%}
-    {%- if section.settings.image3 != blank -%}
-      <div class="three-user">
-        <h1></h1>
-      </div>
-    {%- else -%}
-      <div class="three">
-        <h1></h1>
-      </div>
-    {%- endif -%}
+   
   </div>
+  <div class="review__items">
+
+             
+      <div class="innerimg2">
+    
+        
+          <div class="content">
+           <h1 class="textpara">Lorem Ipsum Dolor</h1>
+                 
+           <p class="textpara">
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nostrum blanditiis sapiente perferendis enim cupiditate odio natus tempore facere ratione qui illum reiciendis asperiores,<br> consequatur facilis incidunt aspernatur corrupti. Praesentium.
+           </p>
+           <button  class="jshoverbtn">click</button>
+      
+          </div>
+               </div>
+    
+  </div>
+  <div class="review__items">
+      <div class="innerimg3">
+    
+        
+          <div class="content">
+           <h1 class="textpara">Sequi ea ut et est quaerat</h1>
+                 
+           <p class="textpara">
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nostrum blanditiis sapiente perferendis enim cupiditate odio natus tempore facere ratione qui illum reiciendis asperiores,<br> consequatur facilis incidunt aspernatur corrupti. Praesentium.
+           </p>
+           <button  class="jshoverbtn">click</button>
+      
+          </div>
+               </div>
+    
+  </div>
+  <div class="review__button">
+      <button id="prev" class="onclickjshoverbtn" onclick="previousReview()">
+          pre
+      </button>
+
+      <button id="next" class="onclickjshoverbtn" onclick="nextReview()">
+          next
+      </button>
+  </div>
+ 
+</div>
 </section>
+<script>
+  let rev = 0;
+     carousel(rev);
+     
+     function previousReview() {
+         rev = rev - 1;
+         carousel(rev);
+     }
+     
+     function nextReview() {
+         rev = rev + 1;
+         carousel(rev);
+     }
+     
+     function carousel(review) {
+         let reviews = document.getElementsByClassName("review__items");
+     
+         if (review >= reviews.length) {
+             review = 0;
+             rev = 0;
+         }
+         if (review < 0) {
+             review = reviews.length - 1;
+             rev = reviews.length - 1;
+         }
+         for (let i = 0; i < reviews.length; i++) {
+             reviews[i].style.display = "none";
+         }
+         reviews[review].style.display = "block";
 
-<style>
-  .three-images-wrapper {
-    display: flex;
-  }
-
-  .one {
-    background-image: url("{{ 'one.png' | asset_url }}");
-    width: 33.333%;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-  }
-  .one-user {
-    background-image: url("{{ section.settings.image | image_url }}");
-    width: 33.333%;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-  }
-  .two {
-    background-image: url("{{ 'two.png' | asset_url }}");
-    width: 33.333%;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-  }
-  .two-user {
-    background-image: url("{{ section.settings.image2 | image_url }}");
-    width: 33.333%;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-  }
-  .three {
-    background-image: url("{{ 'three.png' | asset_url }}");
-    width: 33.333%;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-  }
-  .three-user {
-    background-image: url("{{ section.settings.image3 | image_url }}");
-    width: 33.333%;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-  }
-</style>
-
-{% schema %}
-{
-  "name": "three-images",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "image",
-      "info": "400 x 120px .png recommended"
-    },
-    {
-      "type": "image_picker",
-      "id": "image2",
-      "label": "image2",
-      "info": "400 x 120px .png recommended"
-    },
-    {
-      "type": "image_picker",
-      "id": "image3",
-      "label": "image3",
-      "info": "400 x 120px .png recommended"
-    }
-  ],
-  "blocks": [],
-  "presets": [
-    {
-      "name": "three-images"
-    }
-  ]
-}
-{% endschema %}
+     }
+</script>

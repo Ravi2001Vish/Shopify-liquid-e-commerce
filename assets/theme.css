@@ -58,3 +58,153 @@ body {
    align-items: center;
    height: 100vh; /* Set the height to the full viewport height */
  }
+
+ body{
+   background-color: #dbe3e3;
+}
+    .innerimg1{
+
+      background-image: url("ravi1.jpg");
+    height: 50rem;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+    .innerimg2{
+
+background-image: url("slide-2.jpg");
+height: 50rem;
+border: 1px solid red;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background-size: cover;
+}
+.innerimg3{
+
+background-image: url("slide-3.jpg");
+height: 50rem;
+border: 1px solid red;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background-size: cover;
+}
+.textpara{
+        animation-name: example;
+      animation-duration: 2.8s;
+      text-align: center;
+     
+     
+     
+    }
+    .content{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+       height: 100%;
+       width: 100%;
+       background: rgba(0, 0, 0, 0.2);
+    }
+    .content h1{
+       font-size: 50px;
+       font-family: cursive;
+       color: white;
+    }
+    .content p{
+       margin-top: -20px;
+       color: white;
+    }
+    .jshoverbtn{
+       width: 200px;
+       height: 30px;
+       background-color: rgb(229, 74, 74);
+       color: white;
+       border: none;
+       font-family: cursive;
+       letter-spacing: 3px;
+       border-radius: 2px;
+
+    }
+    .jshoverbtn:hover{
+       background-color: rgb(69, 204, 222);
+       color: aliceblue;
+       transition: 0.6s;
+    }
+ 
+    @keyframes example{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: translateY(1);
+    }
+    }
+    .jshoverbtn{
+        animation-name: buton;
+      animation-duration: 3.8s;
+      text-align: center;
+     
+      width: 100px;
+    }
+    @keyframes buton{
+        0%{
+          opacity: 0;
+        }
+    
+        100%{
+         opacity: 1;
+         
+        }
+       
+    }
+
+    .review {
+        
+        height: auto;
+        width:100%;
+        
+        margin: auto;
+        position: relative;
+    
+        align-items: center;
+    }
+    
+    .review__items {
+        align-items: center;
+        justify-content: space-evenly;
+        width:100%;
+       
+    
+        align-items: center;
+    }
+    .review__button {
+        text-align: center;
+        margin-top: -50px;
+        
+
+    }
+    
+    .review__button button {
+        color: rgb(21, 22, 21);
+       border-radius: 50%;
+       border: none;
+      background-color: aliceblue;
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+      margin-left: 5px;
+      
+        
+    }
+    .review__items {
+        display: none;
+    }
